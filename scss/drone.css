@@ -1,0 +1,352 @@
+
+/********** Template CSS **********/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    /* --primary: #FF5E14; orange */
+    --primary: #2C74B3;
+    /* --primary: #205295; */
+    /* --primary: #144272; */
+    --secondary: #5F656F;
+    --light: #F5F5F5;
+    --dark: #02245B;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+    /* transform: scale(1.5); */
+}
+
+
+h1,
+h2,
+.h1,
+.h2,
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+h3,
+h4,
+.h3,
+.h4,
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+h5,
+h6,
+.h5,
+.h6,
+.fw-semi-bold {
+    font-weight: 500 !important;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    transition: .5s;
+    font-weight: 500;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+.topbar-right {
+    position: relative;
+    background: var(--primary);
+}
+
+.topbar-right::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 100%;
+    top: 0;
+    left: -15px;
+    transform: skewX(-30deg);
+    background-color: var(--primary);
+}
+
+
+/*Upper Header Social-Icon Icon Style Start*/
+.socialmedia_icons .fad_class
+{
+width: 28px;
+height: 28px;
+border-radius: 50%; 
+line-height: 28px;
+color: #FFFFFF;
+background-color: #FF5E14;
+}
+
+.socialmedia_icons .fad_class:hover
+{
+    color: #2C74B3;
+    background-color: pink;  
+}
+/*Upper Header Social-Icon Icon Style End*/
+
+/*Footer Social Icon Style Start*/
+.socialmedia_icons a .fax_class{
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; 
+    line-height: 35px;
+    color: #FFFFFF;
+    background-color: #FF5E14;
+    font-size: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+.socialmedia_icons a .fax_class:hover{
+
+    color: #FF5E14;
+    background-color: #FFFFFF;
+    
+}
+/*Footer Social Icon Style End*/
+
+/*** Navbar ***/
+/* .navbar.sticky-top {
+    top: -100px;
+    transition: .5s;  
+} */
+
+.navbar .navbar-brand {
+    position: relative;
+    padding-right: 10px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    background: var(--primary);
+    width: 280px;
+    padding: 0px;
+    margin: 0px;
+}
+/* 
+.ps-5{
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+} */
+
+.navbar-image{
+    width: 75% !important;
+}
+
+@media screen and (max-width: 767px){
+    .navbar-image{
+        width: 75% !important;
+    }
+    .navbar .navbar-brand{
+        width: 150px;
+    }
+}
+
+
+
+.navbar .navbar-brand::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 99%;
+    top: 0;
+    right: -25px;
+    transform: skewX(-30deg);
+    background-color: var(--primary);
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 35px;
+    padding: 20px 0;
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 500;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    /* background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%); */
+    z-index: 1;
+}
+
+.carousel-image{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+/* @media screen and (max-width: 640px) {
+    .carousel-image{
+        height: 100vh;
+    }
+} */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .carousel-image{
+        height: 50vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color:#FF5E14;
+    border: 15px solid #FF5E14;
+    border-radius: 3.5rem;
+}
+
+.carouselText{
+    color: orangered !important;
+}
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/carousel-2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: var(--light);
+}
+
+
+/*More Information Text Font*/
+.drone-text-font
+{
+    font-family: "Open Sans",sans-serif;
+}
